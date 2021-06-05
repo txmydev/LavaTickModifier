@@ -1,9 +1,13 @@
-package net.exe.euhc.util;
+package net.skulluhc;
 
 import lombok.Data;
+import net.exe.euhc.util.TimeUtil;
 
 import java.util.UUID;
 
+/*
+Not mine
+ */
 @Data
 public class Cooldown {
 
