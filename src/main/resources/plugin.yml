@@ -1,0 +1,7 @@
+main: net.skulluhc.LavaTickModifier
+name: LavaTickModifier
+version: 1.0
+
+commands:
+  setlavatickmodifier:
+  setdebugmode:
