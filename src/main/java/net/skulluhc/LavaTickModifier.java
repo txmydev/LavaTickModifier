@@ -55,6 +55,6 @@ public class LavaTickModifier extends JavaPlugin implements Listener {
 
         cooldowns.remove(player);
         cooldowns.put(player, new Cooldown(this.value));
-        if(debug) player.sendMessage("'" + this.value + "' seconds cooldown is now active");
+        if(debug) player.sendMessage("'" +this.value+ "' seconds cooldown is now active");
     }
 }
