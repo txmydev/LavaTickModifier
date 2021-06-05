@@ -2,9 +2,6 @@ package net.skulluhc;
 
 import lombok.Getter;
 import lombok.Setter;
-import net.exe.euhc.util.Color;
-import net.exe.euhc.util.Cooldown;
-import net.exe.euhc.util.visualise.Cooldowns;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -52,12 +49,13 @@ public class LavaTickModifier extends JavaPlugin implements Listener {
         Cooldown cooldown = cooldowns.get(player);
         if(cooldown != null && !cooldown.hasExpired()) {
             event.setCancelled(true);
-            if(debug) player.sendMessage(Color.translate("Player has tick cooldown " + cooldown.getTimeLeft() + " seconds"));
+            if(debug) player.sendMessage("Player has tick cooldown " + cooldown.getTimeLeft() + " seconds");
             return;
         }
 
         cooldowns.remove(player);
         cooldowns.put(player, new Cooldown(this.value));
-        if(debug) player.sendMessage(this.value+ " seconds cooldown is now active");
+        if(debug) player.sendMessage(this.value + " seconds cooldown is now active");
+
     }
 }
